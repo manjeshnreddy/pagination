@@ -1,0 +1,24 @@
+<div class="container">
+  <div *ngFor="let user of displayContent" class="response_con">
+    <div>
+      <b>Name:</b>{{user.name}}</div>
+    <div>
+      <b>Email:</b>{{user.email}}</div>
+    <div>
+      <b>Phone:</b>{{user.phone}}</div>
+  </div>
+
+
+<div class="pagination">
+  <button class="btn btn-success" [disabled]="hideLeft" (click)="leftPrev()">&laquo;</button> 
+  <span id="paginationtiles" (click)="pagination($event)">
+    <a>1</a>
+    <a>2</a>
+    <a>3</a>
+    <a>4</a>
+    <a>5</a>
+  </span>
+  <button class="btn btn-success" [disabled]="hideRight" (click)="rightNext()">&raquo;</button> 
+</div>
+
+</div>
